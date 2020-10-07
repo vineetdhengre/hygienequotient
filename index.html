@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hygiene Quotient - Your Daily Compliance Monitoring App </title>
+    <link rel="shortcut icon" href="images/logo/favicon.png">
+
+    <!--bootsrap code-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--css code-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--fontawesome codes-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+
+    <!--google font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+    </style>
+
+
+
+    <meta name="description"
+        content="Hygiene Quotient by Equinox Labs helps businesses to keep daily track of their safety and hygiene practices. 100% monitoring with an online dashboard is provided here." />
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="canonical" href="https://hygienequotient.com/">
+
+    <!--google verification tag starts-->
+    <meta name="google-site-verification" content="rnN6UOofBkWwSpWlXcJhFJVAo_Of0d-9Y7pmKFI4yRs" />
+    <!--google verification tag ends-->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-584DBJZ');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+    <style>
+        /* The Modal (background) */
+        .modalForm {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        .modalFormM {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            text-align: center;
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border-radius: 10px;
+            border: 1px solid #888;
+            width: 100vh;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        .modal-contentM {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            margin-top: 50%;
+        }
+
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+
+        .Cstmmodal-header {
+            padding: 15px 0px 10px 15px;
+            background-color: #2075BC;
+            color: white;
+            height: 60px;
+            float: left;
+        }
+
+        .Cstmmodal-headerM {
+            padding: 15px 0px 10px 15px;
+            background-color: #2075BC;
+            color: white;
+            width: 100%
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+
+        }
+
+        .modal-bodyM {
+            padding: 2px 0 2px 0;
+        }
+    </style>
+
+
+</head>
+
+<body class="site-wrapper">
+    <div class="NavigationBar">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <a href="#" class="navbar-brand pl-3">
+                    <img src="/images/logo/logo-retina.png" width="100" height="" alt="Hygiene Quotient Logo" style="float:left">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link"> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about-us.html" class="nav-link"> About Us </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="how-it-works.html" class="nav-link"> How it Works </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link"> Pricing </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact-us.html" class="nav-link"> Contact Us </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid mainBanner " id="content-desktop">
+        <div class="row">
+            <div class="col-8 bannerContain mx-auto" style="position: initial;">
+                <h1 class="pb-3" style="font-size: 2.6rem; color: #ffffff; font-weight: 600; "> Monitor Sites, Validate Evidence,
+                    <br>Improve Compliance
+                </h1>
+
+                <p style="font-size: 1.4rem; line-height: 1.2; ">
+                    Equinox Labs will verify the evidence in real time,
+                    suggest improvements <br> & generate a daily score
+                </p>
+
+
+                <div class="pt-3 pb-3">
+                    <div class="containerForm pr-3" style=" float: left;">
+                        <div class="interior">
+
+                            <a class=" btn btn-large ButonCustm " href="#open-modal"> Set It In Action </a>
+
+                        </div>
+                    </div>
+
+                    <div id="open-modal" class="modal-window">
+                        <div>
+                            <div class="modal-close-custom">
+                                <a href="#" title="Close" class="modal-close">Close</a>
+                            </div>
+
+                            <iframe width="520" height="315" src="https://www.youtube.com/embed/Wm-LOkSW5fE" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="containerForm ">
+                        <div class="interior">
+                            <a class=" btn  btn-large ButonCustm" id="featFrst"> Schedule Free Demo </a>
+                        </div>
+
+                        <!--Form Modal starts-->
+                        <div id="myModalOne" class="modalForm">
+
+                            <!-- Modal content starts-->
+                            <div class="modal-content">
+                                <div class="Cstmmodal-header">
+                                    <span class="close">&times;</span>
+                                    <h4> Sign up for a Free Demo </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="form_lead" action="http://crm.equinoxlab.com/assets/newleads.asp" method="POST">
+                                        <div class="form-group">
+                                            <input type="text" id="sname" name="name" placeholder="Name" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" id="semail" name="email" placeholder="Email" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" id="smobile" name="phone" placeholder="Phone No." required />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="scompany" name="LBL_ACCOUNT_NAME" placeholder="Company"
+                                                required />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" name="LEAD_SOURCE_ID"
+                                                value="6e8d8bbc-2f2f-497f-a248-cd8f29e95086" />
+                                            <input type="submit" value="Submit" class="bton" id="subBtn"
+                                                onclick="return submitFormm();" />
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <!-- Modal content ends-->
+                        </div>
+                        <!--Form Modal ends-->
+                    </div>
+
+                </div>
+
+                <!-- youtube mobile video 
+                <div class="pt-3 pb-3 text-center" id="content-mobile">
+                    <iframe width="320" height="250" src="https://www.youtube.com/embed/Wm-LOkSW5fE?rel=0&amp;autoplay=0&controls=0&disablekb=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    
+                </div> -->
+
+
+                <h2 class="pt-2 " style="font-size: 1.4rem; font-style: italic; color: #ffffff; font-weight: 500;"> Safety and
+                    Hygiene made Simple </h2>
+
+
+            </div>
+
+            <div class="col-4 pt-3" style="margin-bottom:-20px;" id="content-desktop">
+                <div id="video-bannerD">
+                    <div class="imageBannerD">
+                        <img src="/images/mobile-mockups/banner-mobile-image.png" alt="Hygiene Quotient App Dashboard working "
+                            srcset="" width="230px;" height="450px;">
+                    </div>
+                </div>
+
+                <div class="videoBannerD">
+                    <img src="/video/BannerVideo.gif" height="425">
+                    <!--
+                    <video width="210" height="435"
+                    loop="loop" autoplay="autoplay"
+                    src="/video/BannerVideo.gif" id="VideoSet" >   
+                      </video> -->
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div style="clear: both;"> </div>
+
+    <div class="container-fluid mainBannerM" id="content-mobile">
+        <div class="row pt-3">
+
+            <div class="col-12">
+                <h1 class="text-center text-white" style="font-size: 1.4rem;  font-weight: 600; "> Monitor Sites, Validate
+                    Evidence, Improve Compliance
+                </h1>
+
+                <h4 class="text-center text-white pt-3" style="font-size: 1rem; ">
+                    Equinox Labs will verify the evidence in real time, suggest improvements & generate a daily score
+                </h4>
+            </div>
+
+
+
+            <div class="col-6 pt-3">
+                <div id="video-bannerM">
+                    <div class="imageBannerM">
+                        <img src="/images/mobile-mockups/banner-mobile-image.png" alt="Hygiene Quotient App Dashboard working "
+                            width="145px;" height="290px;">
+                    </div>
+                </div>
+
+                <div class="videoBannerM">
+                    <img src="/video/BannerVideo.gif" height="270">
+                </div>
+            </div>
+
+
+
+            <div class="col-6 pt-3">
+                <div class=" text-center">
+
+                    <p class="h5" style="color: #ffffff; font-weight: 600;">
+                        Sign up for a Free Demo
+                    </p>
+
+                    <form id="form_lead" action="http://crm.equinoxlab.com/assets/newleads.asp" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="mname" name="name" placeholder="Name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="memail" name="email" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="mmobile" name="phone" placeholder="Phone No." required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="mcompany" name="LBL_ACCOUNT_NAME" placeholder="Company" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="LEAD_SOURCE_ID" value="6e8d8bbc-2f2f-497f-a248-cd8f29e95086" />
+                            <input type="submit" value="Submit" class="bton" id="subBtn" onclick="return submitFormm();" />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div style="clear: both;"> </div>
+
+
+    <div class="container-fluid Only-mar-cont " style="padding-top: 4%;" id="content-desktop">
+
+        <div class="row pl-5 text-center">
+            <p style="font-size: 22px; font-weight: 700;"> <i> “Our mission is to help organizations build safer spaces through
+                    technology driven innovation, scalable processes and actionable insights.” </i>
+            </p>
+        </div>
+
+        <div class="row pl-md-5 pr-md-3">
+
+            <div class="col-md-6  Cstm-cont-need">
+
+                <p style="font-size: 17px; "> <span style="font-size: 24px; font-weight: 700;"> Need </span> </br> Everyone today
+                    is aware about the <b> importance of Hygiene and Safety. </b>
+                    </br>Hygiene is a series of <b> daily practices </b> performed to ensure health & safety.
+                    </br>
+                    <span style="padding-top: 5px;">
+                        Government as well as private authorities are <b> updating their protocols frequently. </b>
+                        The current processes are <b> inadequate </b> to ensure hygiene standards are being <b> stringently
+                            followed </b> on a daily basis.
+                    </span>
+
+                </p>
+
+            </div>
+
+            <div class="col-md-6">
+                <img src="/images/ot-images/mission-image.png" alt="" srcset="" height="300px;">
+            </div>
+
+            <div class="col-12 mx-auto mt-3 pt-2">
+                <p style="font-size: 17px;"> <i> To eradicate any such circumstances a robust monitoring system is required. A
+                        system that’ll supervise the day to day activities that lead to establishing overall Safety and Hygiene.
+                        </br> Equinox Lab’s Hygiene Quotient is a quick fix to all the problems keeping you from maintaining high
+                        hygiene standards on a daily basis. </i>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div style="clear: both;"> </div>
+
+    <div class="container-fluid" id="content-mobile">
+        <div class="row">
+            <div class="container Only-mar-cont pb-md-4 " style="padding-top:2%;">
+
+
+                <div class="row text-center" style="padding: 0 5px 0 5px;">
+                    <p style="font-size: 18px; font-weight: 700;"> <i> </br>“Our mission is to help organizations build safer
+                            spaces through technology driven innovation, scalable processes and actionable insights.” </i>
+                    </p>
+                </div>
+
+                <div class="row pl-md-5 pr-md-3">
+
+                    <div class="col-md-6 Cstm-cont-need">
+
+                        <p style="font-size: 17px; "> <span style="font-size: 24px; font-weight: 700;"> Need </span> </br>
+                            Everyone today is aware about the <b> importance of Hygiene and Safety. </b>
+                            </br>Hygiene is a series of <b> daily practices </b> performed to ensure health & safety.
+                            </br>
+                            <span style="padding-top: 5px;">
+                                Government as well as private authorities are <b> updating their protocols frequently. </b>
+                                The current processes are <b> inadequate </b> to ensure hygiene standards are being <b>
+                                    stringently followed </b> on a daily basis.
+                            </span>
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6 text-center">
+                        <img src="/images/ot-images/mission-image.png" alt="" srcset="" height="180px;">
+                    </div>
+
+                    <div class="col-12 mx-auto pt-2">
+                        <p style="font-size: 14px;"> <i> To eradicate any such circumstances a robust monitoring system is
+                                required. A system that’ll supervise the day to day activities that lead to establishing overall
+                                Safety and Hygiene. </br> Equinox Lab’s Hygiene Quotient is a quick fix to all the problems
+                                keeping you from maintaining high hygiene standards on a daily basis. </i>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container Only-mar-cont pr-3 " id="content-desktop">
+        <div class="row text-center">
+
+            <div class="col">
+
+                <div class="row pb-4">
+                    <div class="col-12 text-center ">
+                        <h3 class="text-black text-center" style="font-size: 2.1rem; font-weight: 600;"> Features </h3>
+
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-4">
+                        <div class="row " style="margin-bottom: 5%; padding-bottom: 5%;">
+                            <div class="figure text-center">
+                                <img src="/images/ot-images/real-time.png" alt="real time icon" srcset="" height="60px; ">
+                                <figcaption class="figure-caption" style="font-size: 1.1rem; font-weight: 600;"> Real Time
+                                    Feedback </figcaption>
+                                <p style="font-size: 14px; padding-top: 5px; "> Using LiveView technology your on ground teams
+                                    will receive real time feedback on the evidence they submit </p>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top: 5%; padding-top: 5%;">
+                            <div class="figure text-center">
+                                <img src="/images/ot-images/easy.png" alt="setting icon" srcset="" height="60px; ">
+                                <figcaption class="figure-caption" style="font-size: 1.1rem; font-weight: 600;"> Easy to Use
+                                </figcaption>
+                                <p style="font-size: 14px; padding-top: 5px; "> Once logged in, get access to the checklist by a
+                                    single click of button to submit the evidence </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--image column starts-->
+                    <div class="col-4">
+                        <img class="img-fluid" src="/images/mobile-mockups/benefit-image.png"
+                            alt="Hygiene Quotient App Mobile working" width="200">
+                    </div>
+                    <!--image column ends-->
+
+
+                    <div class="col-4">
+                        <div class="row " style="margin-bottom: 5%; padding-bottom: 5%;">
+                            <div class="figure text-center">
+                                <img src="/images/ot-images/live-metrics.png" alt="live metrics icon" srcset="" height="60px; ">
+                                <figcaption class="figure-caption" style="font-size: 1.1rem; font-weight: 600;"> Live Metrics
+                                </figcaption>
+                                <p style="font-size: 14px; padding-top: 5px; "> As the teams on ground get feedback, their
+                                    business application will get a live metric for every site - The Hygiene Quotient. </p>
+
+
+                            </div>
+                        </div>
+
+                        <div class="row pt-3" style="margin-top: 5%; padding-top: 5%;">
+                            <div class="figure text-center">
+                                <img src="/images/ot-images/better-compliance.png" alt="better compliance icon" srcset=""
+                                    height="60px; ">
+
+                                <figcaption class="figure-caption" style="font-size: 1.1rem; font-weight: 600;"> Compliance
+                                    Analysis </figcaption>
+                                <p style="font-size: 14px; padding-top: 5px; "> By using Hygiene Quotient you will be able to
+                                    enforce a higher degree of compliance. </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid Only-mar-cont pl-3 pr-3 pt-4 mb-2" id="content-mobile">
+        <div class="row">
+
+            <div class="col-md-8 text-left ">
+                <h3 class=" text-center" style="color: #2075BB;"> Features </h3>
+                <div class="row pt-4">
+
+                    <div class="col-12">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/real-time.png"
+                                alt="real time icon">
+                            <div class="media-body pt-md-2">
+                                <h6 class="mt-0 " style="font-size:  medium; font-weight: 600;"> Real Time Feedback </h6>
+                                <p> Using LiveView technology your on ground teams will receive real time feedback on the evidence
+                                    they submit</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/easy.png" alt="setting icon">
+                            <div class="media-body pt-md-2">
+                                <h6 class="mt-0 " style="font-size:  medium; font-weight: 600;"> Easy to Use </h6>
+                                <p> Once logged in, get access to the checklist by a single click of button to submit the evidence
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/live-metrics.png"
+                                alt="live metrics icon">
+                            <div class="media-body pt-md-2">
+                                <h6 class="mt-0 " style="font-size:  medium; font-weight: 600;"> Live Metrics </h6>
+                                <p> As the teams on ground get feedback, their business application will get a live metric for
+                                    every site - The Hygiene Quotient. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/better-compliance.png"
+                                alt="better compliance icon">
+                            <div class="media-body pt-md-2">
+                                <h6 class="mt-0 " style="font-size:  medium; font-weight: 600;"> Compliance Analysis </h6>
+                                <p> By using Hygiene Quotient you will be able to enforce a higher degree of compliance. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-5 pt-3">
+        <div class="row ">
+
+            <div class="col-md-6 mx-auto pt-3 pb-3 text-center shadow  bg-white " id="Asection">
+
+                <h3 class="text-white" style="font-weight: 600; font-size: 1.9rem;"> Application </h3>
+
+                <div class="row text-white">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/Covid_19.png" alt="covid virus" srcset="" height="40px;">
+                        <p class="pt-2"> COVID-19 Measures </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/housekeepking.png" alt="housekeepking icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Housekeeping </p>
+                    </div>
+                </div>
+
+                <div class="row text-white">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/operations.png" alt="operations icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Operations </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/Security.png" alt="Security icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Security </p>
+                    </div>
+                </div>
+
+                <div class="row text-white">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/Food Safety.png" alt="food safety icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Food Safety </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/Infrastructure.png" alt="Infrastructure icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Infrastructure </p>
+                    </div>
+                </div>
+
+                <div class="row text-white">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/transport.png" alt="Aeroplane icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Transport </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/Facility management.png" alt="Facility management icon" srcset=""
+                            height="40px;">
+                        <p class=" pt-2"> Facility Management </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 mx-auto pt-3 pb-3 text-center" id="Ssection">
+                <h3 class="text-white" style="font-weight: 600; font-size: 1.9rem;"> Sector </h3>
+
+                <div class="row text-white ">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/office.png" alt="desktop icon" srcset="" height="40px;">
+                        <p class="pt-2"> Offices </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/F&B.png" alt="cutlery icon " srcset="" height="40px;">
+                        <p class=" pt-2"> Hotels & Restaurants </p>
+                    </div>
+                </div>
+
+                <div class="row text-white">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/Hospital.png" alt="doctor kit icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Hospitals </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/school.png" alt="stationary icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Schools </p>
+                    </div>
+                </div>
+
+                <div class="row text-white">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/housing society.png" alt="home icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Housing Societies </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/travel.png" alt="Aeroplane icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Travels </p>
+                    </div>
+                </div>
+
+                <div class="row text-white">
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/malls.png" alt="Mask icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Malls and Entertaintment </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/about-us-mockups/retail.png" alt="retail icon" srcset="" height="40px;">
+                        <p class=" pt-2"> Retail </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-3 pt-3 " id="content-desktop">
+
+        <div class="row ">
+            <div class="col">
+                <h3 class="text-black text-center" style="font-size: 2.1rem; font-weight: 600;"> Benefits </h3>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-4 text-center">
+                <img src="/images/mobile-mockups/benefit-image.png" alt="Hygiene Quotient App Mobile working" srcset=""
+                    height="340px;">
+            </div>
+
+            <div class="col-8 text-center">
+                <div class="row " style="padding-top: 5%;">
+                    <div class="col-6 ">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/android.png"
+                                alt="Generic placeholder image">
+                            <div class="media-body pt-md-2">
+                                <h5 class="mt-0 " style="font-size: large; font-weight: 600;"> Capture Evidence with a Single
+                                    Click </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/easy.png" alt="setting icon">
+                            <div class="media-body pt-md-2">
+                                <h5 class="mt-0" style="font-size: large; font-weight: 600;"> Get Feedback within minutes </h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-6 pt-5">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/trend.png"
+                                alt="Generic placeholder image">
+                            <div class="media-body pt-md-2">
+                                <h5 class="mt-0 " style="font-size: large; font-weight: 600;"> Sites can check their HQ score and
+                                    7-day trends </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 pt-5">
+                        <div class="media">
+                            <img class="align-self-start mr-3 media-icon" src="/images/ot-images/business.png"
+                                alt="Generic placeholder image">
+                            <div class="media-body pt-md-2">
+                                <h5 class="mt-0" style="font-size: large; font-weight: 600;"> Business Apps can see multiple site
+                                    scores & weekly trends </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container Only-mar-cont pt-4 mb-2" id="content-mobile">
+        <div class="row mx-auto">
+            <h3 class=" text-center" style="color: #2075BB; font-weight: 600;"> Benefits </h3>
+
+            <div class="col-12 pb-2 pt-3">
+                <div class="media">
+                    <img class="align-self-start mr-3 media-icon" src="/images/ot-images/android.png" alt="Capture Evidence">
+                    <div class="media-body">
+                        <h6 class="mt-0 " style="font-size:  medium; font-weight: 600;"> Capture Evidence with a Single Click
+                        </h6>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 pt-4">
+                <div class="media">
+                    <img class="align-self-start mr-3 media-icon" src="/images/ot-images/easy.png" alt="Get Feedback">
+                    <div class="media-body ">
+                        <h6 class="mt-0 " style="font-size: medium; font-weight: 600;"> Get Feedback within minutes
+                            <span style="color: #fff;"> click</span>
+                        </h6>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 pb-3 pt-4">
+                <div class="media">
+                    <img class="align-self-start mr-3 media-icon" src="/images/ot-images/trend.png"
+                        alt="Generic placeholder image">
+                    <div class="media-body ">
+                        <h6 class="mt-0 " style="font-size:  medium; font-weight: 600;"> Sites can check their HQ score and 7-day
+                            trends </h6>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 pt-3">
+                <div class="media">
+                    <img class="align-self-start mr-3 media-icon" src="/images/ot-images/business.png"
+                        alt="Generic placeholder image">
+                    <div class="media-body ">
+                        <h6 class="mt-0 " style="font-size:  medium; font-weight: 600;"> Business Apps can see multiple site
+                            scores & weekly trends </h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+
+
+
+    <!-- form section
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-8 mx-auto">
+
+              
+                        <div class="CstmFormcontactus shadow-sm text-center">
+        
+                            <p class="h2" style="color: #2075bb; font-weight: 600; text-transform: uppercase;">
+                                Sign up for a Free Demo
+                            </p>
+            
+                              <form id="form_lead"
+                              action="http://crm.equinoxlab.com/assets/newleads.asp"
+                              method="POST">
+                                <div class="form-group">
+                                  <input type="text" id="mname" name="name" placeholder="Name" required/>
+                                </div>
+                                <div class="form-group">
+                                  <input
+                                    type="email"
+                                    id="memail"
+                                    name="email"
+                                    placeholder="Email" required
+                                  />
+                                </div>
+                                <div class="form-group">
+                                  <input
+                                    type="tel"
+                                    id="mmobile"
+                                    name="phone"
+                                    placeholder="Phone No." required
+                                  />
+                                </div>
+                                <div class="form-group">
+                                  <input
+                                    type="text"
+                                    id="mcompany"
+                                    name="LBL_ACCOUNT_NAME"
+                                    placeholder="Company" required
+                                  />
+                                </div>
+                                <div class="form-group">
+                                  <input type="hidden" name="LEAD_SOURCE_ID" value="6e8d8bbc-2f2f-497f-a248-cd8f29e95086" />
+                                  <input
+                                    type="submit"
+                                    value="Submit"
+                                    class="bton"
+                                    id="subBtn"
+                                    onclick="return submitFormm();"
+                                  />
+                                </div>
+                              </form>
+            
+                        </div>
+            </div>
+
+
+        </div>
+    </div> -->
+
+    <!--Footer Copyright Section starts-->
+    <div class="container-fluid bg-dark pb-3 pt-2">
+        <div class="footer-copyright text-center text-white-50 py-2 ">
+            Copyright ©
+            <script> document.write((new Date()).getFullYear()) </script> Equinox Labs | All Rights Reserved
+        </div>
+    </div>
+
+    <!--Footer Copyright Section starts-->
+
+
+</body>
+<script src="js/jquery.js"></script>
+<!--custom js file form form-->
+<script src="js/Cstmjquery.js"></script>
+<!--bootstrap code of javascript-->
+<script src="js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow:/sitemap
+Allow:/sitemap.xml
+
+Sitemap: http://hygienequotient.com/sitemap.xml

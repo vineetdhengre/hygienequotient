@@ -1,0 +1,522 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.site-wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+
+
+/** for menu items list**/
+.navbar-nav li{
+    padding : 0px 10px 0px 10px;
+}
+
+
+.site-content{
+    background-image: url('../images/banners/hq-banner.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.site-title{
+    color: #fff;
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.site-title-mob{
+    color: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.CstmCntainer{
+    background-color: rgba(26, 20, 20, 0.849);
+    padding: 0 10px 6% 10px ;
+    border-radius: 10px;
+}
+
+.card-body{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.CstmFormCl{
+    margin-left: 5%;
+    padding: 20px 0px 0px 0px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 7px 1px #888888;
+
+}
+
+.CstmFormcontactus{
+    padding: 20px 0 20px 0px;
+    background-color: #DEF1F5;
+    border-radius: 15px;
+    
+    
+
+}
+
+.txtCstm{
+    padding-top: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+.CstmHr{
+    border-style: none;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.CstmHrN{
+    border-style: none;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.CstmHrlow{
+    border-style: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.PricHR{
+    width: 80%;
+    
+}
+
+
+.btn-Cstm{
+    background-color: #2076bce3;
+    color: #fff;
+    
+}
+
+
+.CstmCntainer-thankyou{
+    background-color: #1f75bbd2;
+    padding: 0px 15px 15% 15px ;
+    border-radius: 10px;
+}
+
+.display-2{
+    color: #fff;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+
+
+/* form design*/
+
+input{
+    font-size: 18px;
+    color: rgb(229, 182, 182);
+    padding-left: 5px;
+}
+
+::placeholder{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+}
+
+
+
+
+input[type="text"]{
+    width: 65%;
+    height: 60%;
+    background-color: #fafafa;
+    border-radius: 5px;
+    color: rgb(36, 34, 34);
+    border: 1px solid #007BFF;
+}
+
+input[type="email"]{
+    width: 65%;
+    height: 10%;
+    background-color: #fafafa;
+    border-radius: 5px;
+    color: rgb(36, 34, 34);
+    border: 1px solid #007BFF;
+}
+
+input[type="tel"]{
+    width: 65%;
+    height: 10%;
+    background-color: #fafafa;
+    border-radius: 5px;
+    color: rgb(36, 34, 34);
+    border: 1px solid #007BFF;
+}
+
+  .bton{
+        border-radius: 10px;
+        color: #fff;
+        font-size: 100%;
+        padding : 10px 30px 10px 30px;
+        border: 2px solid #fff;
+        text-decoration: none;
+        background-color: #2076bcd3;
+    }
+    
+    .bton:hover{
+        color: #fff;
+        border: 1px solid #fff;
+        box-shadow: 1px 1px 8px 1px rgb(49, 49, 51);
+        background-color: #2076bcd3;
+    }
+/* form design ends*/
+
+
+/*pop modal custom button starts*/
+.bton-pop{
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    padding : 10px 30px 10px 30px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    background-color: #2075BC;
+}
+
+.bton-pop:hover{
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 8px 1px rgb(49, 49, 51);
+}
+/*pop modal custom button ends*/
+
+
+
+/** mobile responsive code (showing the content for mobile and desktop) **/
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
+/** end of mobile responsive code (showing the content for mobile and desktop) **/
+
+.hr-certified{
+    width: 50%;
+    text-align:left;
+    margin-left: 0;
+    
+}
+
+.Cstm-headr{
+    padding: 5px 0 5px 0;
+    background-color: #2076bcd3;
+}
+
+.Img-Cstm{
+    text-align: center;
+}
+
+
+.Cstm-hq-pro{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-image: url("/images/banners/hyg-pro-baner.jpg");
+}
+
+.Cstm-hq-pro-full{
+    padding-top: 2%;
+    background-image: url("");
+}
+
+
+/** All codes of new home page**/
+
+.mainBanner{
+    padding-bottom: 0%;
+    background: rgb(34,24,85);
+    background: linear-gradient(351deg, rgba(34,24,85,1) 14%, rgba(10,116,200,1) 93%);
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    
+}
+
+.mainBannerM{
+    padding-bottom: 0%;
+    width: 100%;
+    height: auto;
+    background: rgb(34,24,85);
+    background: linear-gradient(162deg, rgba(34,24,85,1) 14%, rgba(10,116,200,1) 93%);
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    
+}
+
+
+.Only-mar-cont{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*
+.mainBannerReverse{
+    background-image: url("../images/banners/rotate-backg-banner.jpg");
+    background-repeat: no-repeat;
+    
+} */
+
+.ButonCustm{
+    border: 2px;
+    border-radius: 40px;
+    padding: 12px 25px 12px 25px;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.PriceButton{
+    border: 2px;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    background-color: #2075BB;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.ButonCustmMobile{
+    border: 2px;
+    border-radius: 40px;
+    padding: 15px 20px 15px 20px;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bannerContain{
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+.nav-link{
+    color: black;
+    font-size: 18px;
+}
+
+.display-4{
+
+    margin-bottom: 3%;
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 2.6rem;
+}
+
+.Cstm-cont-need{
+    padding-top: 6%;
+}
+
+.media-icon{
+    width: 60px;
+}
+
+.CstmBodyHome{
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.BeneImg{
+    background-color: #01AEF0; 
+}
+
+
+
+.SctrBanr{
+    background-image: url("");   
+}
+
+.figure-caption{
+    font-size: 1.2rem;
+    color: rgb(39, 38, 38);
+}
+
+.mobileCaption{
+    font-size: 0.8rem;
+    color: rgb(39, 38, 38);
+}
+
+.CsTMbuTnPric{
+    background-color: #46D4FC;
+}
+
+.TxtCstm{
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 0 5px 0;
+    margin-bottom: 30px;
+}
+
+
+/*button*/
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-window > div {
+    width: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background-color: #ffffff;
+    
+    border-radius: 15px;
+}
+.modal-window header {
+    font-weight: bold;
+}
+
+.modal-close {
+    color: rgb(32, 31, 31);
+    line-height: 50px;
+    font-size: 100%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    
+}
+
+.modal-close-custom{
+    padding-bottom: 10px;
+}
+.modal-close:hover {
+    color: rgb(53, 50, 50);
+}
+/* Demo Styles */
+a {
+    color: inherit;
+}
+
+.modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+small {
+    color: #aaa;
+}
+
+.form-containerM{
+    width: 100px;
+}
+
+
+/* pricing tick colour */
+i.fa{
+    color: #1CA8D1;
+}
+
+
+/* loop video banner */
+
+#video-bannerD{
+    position: relative;
+}
+
+
+.imageBannerD{
+    position: absolute;
+    z-index: 2;
+    
+}
+
+.videoBannerD{
+    position: absolute;
+    z-index: 1;
+    padding-left: 9px;
+    padding-top: 12px;
+}
+
+#video-bannerM{
+    position: relative;
+}
+
+.imageBannerM{
+    position: absolute;
+    padding-left: 12px;
+    z-index: 3
+}
+
+.videoBannerM{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+
+.pricingPlans{
+    background-color: #2075bc;
+    height: auto;
+    padding: 4% 0 4% 0;
+}
+
+.Aboutpage{
+    background-color: #2075bc;
+    height: auto;
+    padding: 3% 0 3% 0;
+}
+
+.TestBox{
+    background-color: #fff;
+    padding: 10px 0 20px 15px ;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 4px 4px #bbb7b7;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.TestBox:hover{
+    transform: scale(1.1);
+}
+
+#Asection{
+    background: rgb(60,45,139);
+    background: linear-gradient(225deg, rgba(60,45,139,1) 9%, rgba(10,116,200,1) 93%);
+    
+    
+}
+
+#Ssection{
+    background: rgb(60,45,139);
+background: linear-gradient(350deg, rgba(60,45,139,1) 9%, rgba(10,116,200,1) 93%);
+  }
